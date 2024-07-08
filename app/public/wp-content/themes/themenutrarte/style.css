@@ -1,0 +1,404 @@
+/*
+Theme Name: themenutrarte
+Theme URI: https://wordpress.org/themes/themenutrarte/
+Author: Yurany ulchur
+Author URI: https://wordpress.org/
+Description: Try the technique of nutrarte
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: themenutrarte
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+:root {
+    --color-dark-green: #1c3f3b;
+    --color-light-green: #28a745;
+    --color-hover-green: #4a7755;
+    --color-orange: #ff9800;
+    --color-white: #ffffff;
+    --color-gray: #333;
+    --color-light-gray: #f2f2f2;
+    --color-footer-bg: #264b46;
+    --color-footer-text: #fff;
+    --color-banner-text: rgb(59, 59, 59);
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar-custom {
+    background-color: var(--color-dark-green);
+}
+
+.search-btn {
+    background-color: var(--color-light-green);
+    color: var(--color-white);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.button:hover, .search-btn:hover, #addressForm button[type="submit"]:hover, .button-read-about:hover {
+    background-color: var(--color-hover-green);
+}
+
+.button:focus, .button:active, .search-btn:focus, .search-btn:active, #addressForm button[type="submit"]:focus, #addressForm button[type="submit"]:active, .button-read-about:focus, .button-read-about:active {
+    outline: none;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 850px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: var(--color-banner-text);
+    max-width: 400px;
+}
+
+.button-banner {
+    background-color: var(--color-orange);
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    color: var(--color-white);
+}
+
+.banner-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.banner-content .btn {
+    font-size: 1.2em;
+}
+
+.title-about {
+    color: var(--color-orange);
+    margin-bottom: 20px;
+}
+
+.button-read-about {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+.text-about {
+    font-size: 17px;
+}
+
+
+.container-about {
+    margin-top: 50px;
+}
+
+.content-sidebar {
+    align-items: end;
+}
+
+.card {
+    width: 300px;
+}
+
+.title-contact {
+    color: var(--color-orange);
+    margin-left: 20px;
+}
+
+.image-contact {
+    width: 450px;
+    height: auto;
+}
+
+.container-contact {
+    margin-top: 200px;
+    margin-bottom: 0;
+}
+
+#adress-form-error {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    display: none;
+}
+
+#adress-form-error.success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    display: block;
+}
+
+#adress-form-error.error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    display: block;
+}
+
+#addressForm {
+    width: 400px;
+    padding: 10px;
+    margin-left: 15px;
+}
+
+#addressForm button[type="submit"] {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+
+#addressForm label {
+    font-weight: bold;
+}
+
+#addressForm .form-check-input {
+    margin-top: 0.3rem;
+}
+
+.social-column {
+    margin-top: 20px;
+}
+
+.social-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.social-links li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.social-links a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--color-gray);
+    background-color: var(--color-light-gray);
+    border-radius: 50%;
+}
+
+.social-links a:hover {
+    color: var(--color-orange);
+}
+
+.fab {
+    vertical-align: middle;
+}
+
+footer {
+    background-color: var(--color-footer-bg);
+}
+
+.footer-custom {
+    color: var(--color-footer-text);
+    padding: 20px 0;
+    position: relative;
+    min-height: 200px;
+}
+
+.footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-custom ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-custom ul li {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    color: var(--color-footer-text);
+    padding: 10px;
+}
+
+
+/* Small screens (desks) */
+@media (max-width: 576px) {
+
+    .image-about {
+        width: 330px;
+    }
+
+    .about-box {
+        padding-top: 20px;
+    }
+
+    .card {
+        width: 370px;
+    }
+
+    .content-sidebar {
+        align-items: center;
+    }
+
+    .title-contact {
+        margin-left: 10px;
+    }
+
+    .image-contact {
+        display: none;
+    }
+
+    #addressForm {
+        width: 350px;
+        margin-left: 0px;
+    }
+
+    .footer-custom .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-custom .col-lg-2 {
+        width: 100%;
+        max-width: calc(50% - 20px);
+        margin: 10px;
+    }
+
+    .footer-custom ul {
+        padding-left: 0;
+    }
+
+    .footer-bottom {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+
+
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .image-about {
+        width: 90%;
+        height: auto;
+ 
+    }
+
+    .text-about {
+        font-size: 16px;
+    }
+
+    .about-box {
+        padding-right: 60px;
+        padding-top: 20px;
+    }
+
+    .card {
+        width: 250px;
+    }
+
+    .image-contact {
+        display: none;
+    }
+
+    .footer-custom .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 40px;
+
+    }
+
+    .footer-custom .col-lg-2 {
+        margin: 10px;
+        padding-left: 140px;
+    }
+
+    .footer-custom ul {
+        padding-left: 0px;
+    }
+
+    .footer-bottom {
+        position: static;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+
+    .image-about {
+        width: 450px;
+    }
+
+    #social-widget-container {
+        padding-left: 50px;
+    }
+}
+
