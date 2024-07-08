@@ -4,6 +4,8 @@ practical project for demonstrate skills in various areas.This exercise is desig
 
 ------------
 
+user: root
+password: root
 
 
 #### INSTALLATION 📌
